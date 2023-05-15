@@ -4,7 +4,7 @@ Talking with a PDF using ChatPDF
 
 ## What is ChatPDF
 
-ChatPDF is a simple Python application that utilises [embeddings](https://platform.openai.com/docs/guides/embeddings) and [langchain](https://github.com/hwchase17/langchain) to execute queries on PDF files through ChatPGT."
+ChatPDF is a simple Python application that utilises [embeddings](https://platform.openai.com/docs/guides/embeddings) and [langchain](https://github.com/hwchase17/langchain) to execute queries on PDF files through ChatPGT.
 
 ## Why ChatPDF
 
@@ -12,7 +12,15 @@ ChatGPT is excellent at processing general content, however, it is not optimised
 
 ## How to run the app
 
+### Prerequisite
+
+You have python3 installed or run the following command to install it.
+```
+brew install python@3.10
+```
+
 ### Install dependencies
+
 ```
 pip install -r requirements
 ```
