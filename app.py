@@ -12,6 +12,8 @@ from langchain.chains import RetrievalQA
 dotenv.load_dotenv()
 openai_api_key = os.getenv("OPENAI_API_KEY")
 
+st.header("Chat PDF")
+
 file = st.file_uploader("Upload a PDF file", type=["pdf"])
 if file is not None:
     with tempfile.NamedTemporaryFile(delete=False) as tf:
