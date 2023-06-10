@@ -10,6 +10,14 @@ ChatPDF is a simple Python application that utilises [embeddings](https://platfo
 
 ChatGPT is excellent at processing general content, however, it is not optimised for specialised content like PDFs. This project aims to showcase how to leverage ChatGPT and embeddings against specific content.
 
+## Demo
+
+![chatpdf_demo](chatpdf_demo.gif)
+
+## Architecture
+
+![chatpdf_arch](chatpdf_arch.png)
+
 ## How to run the app
 
 ### Prerequisite
