@@ -54,6 +54,9 @@ def init_chain():
     #         type="password"
     #     )
 
+    st.session_state["OPENAI_API_KEY"] = ""
+    st.session_state["chain"] = None
+
     st.text_input(
         "OpenAI API Key",
         value=st.session_state["OPENAI_API_KEY"], 
@@ -111,8 +114,9 @@ if __name__ == "__main__":
     st.divider()
 
     st.subheader("Chat History")
-    for user_query, response in st.session_state["chain"].chat_history:
-        chat(user_query, is_user=True)
-        chat(response, is_user=False)
+    if "chain" in st.session_state and st.session_state["chain"] is not None:
+        for user_query, response in st.session_state["chain"].chat_history:
+            chat(user_query, is_user=True)
+            chat(response, is_user=False)
 
     st.markdown("[Source Code](https://github.com/mlin6436/chatpdf)")
