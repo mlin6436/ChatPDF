@@ -85,6 +85,7 @@ def qa():
                 st.session_state["chain"].chat_history.append((user_query, answer))
 
 if __name__ == "__main__":
+    st.set_page_config(page_title="Chat PDF")
     st.title("Chat PDF")
 
     reset_sessions()
