@@ -1,5 +1,5 @@
 import os
-from dotenv import load_dotenv, find_dotenv
+# from dotenv import load_dotenv, find_dotenv ### For Local
 import tempfile
 import streamlit as st
 from streamlit_chat import message as chat
@@ -39,19 +39,27 @@ def reset_sessions():
     st.session_state["spinner_querying"] = st.empty()
 
 def init_chain():
-    dotenv = find_dotenv(".env")
-    if dotenv:
-        load_dotenv()
+    ### For Local
+    # dotenv = find_dotenv(".env")
+    # if dotenv:
+    #     load_dotenv()
 
-    if os.getenv("OPENAI_API_KEY"):
-        st.session_state["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
-    else:
-        st.text_input(
-            "OpenAI API Key",
-            value=st.session_state["OPENAI_API_KEY"], 
-            key="text_input_openai_api_key",
-            type="password"
-        )
+    # if os.getenv("OPENAI_API_KEY"):
+    #     st.session_state["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
+    # else:
+    #     st.text_input(
+    #         "OpenAI API Key",
+    #         value=st.session_state["OPENAI_API_KEY"], 
+    #         key="text_input_openai_api_key",
+    #         type="password"
+    #     )
+
+    st.text_input(
+        "OpenAI API Key",
+        value=st.session_state["OPENAI_API_KEY"], 
+        key="text_input_openai_api_key",
+        type="password"
+    )
 
     # TODO: validate api key
     if st.session_state["OPENAI_API_KEY"]:
