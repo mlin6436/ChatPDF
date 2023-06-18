@@ -1,3 +1,4 @@
 streamlit
-pdfplumber
+streamlit_chat
 langchain
+faiss-cpu
