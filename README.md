@@ -1,6 +1,6 @@
 # ChatPDF
 
-Talking with a PDF using ChatPDF
+Talking with PDFs ➡ [Live Demo](https://chatpdf-demo.streamlit.app/)
 
 ## What is ChatPDF
 
